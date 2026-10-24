@@ -170,8 +170,12 @@ code { color: var(--mint); font-family: "SFMono-Regular", Consolas, "Liberation 
 .product-note { margin: 17px 0 0; color: var(--muted); font-size: 9px; line-height: 1.6; }
 .product-note span { margin-right: 5px; }
 
-.learning-heading { align-items: end; }
-.learning-intro { max-width: 370px; }
+.learning-heading { display: grid; grid-template-columns: minmax(150px, 0.32fr) minmax(0, 1.68fr); align-items: center; gap: clamp(26px, 5vw, 68px); }
+.youtube-visual { width: min(100%, 230px); margin: 0; filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.2)); }
+.youtube-visual svg { display: block; width: 100%; height: auto; }
+.learning-heading-copy { min-width: 0; }
+.learning-heading-copy .section-kicker { margin-bottom: 15px; }
+.learning-intro { max-width: 570px; margin-top: 14px; }
 .learning-intro p { margin-bottom: 10px; color: var(--muted); font-size: 12px; line-height: 1.7; }
 .learning-intro p strong { color: var(--text); font-variant-numeric: tabular-nums; }
 .course-table { width: 100%; table-layout: fixed; border-collapse: collapse; }
@@ -286,6 +290,8 @@ code { color: var(--mint); font-family: "SFMono-Regular", Consolas, "Liberation 
   .section-intro { max-width: 500px; margin-top: 14px; font-size: 12px; }
   .engineering-heading { display: grid; grid-template-columns: minmax(0, 1fr); gap: 21px; }
   .engineering-visual { width: min(100%, 270px); }
+  .learning-heading { display: grid; grid-template-columns: minmax(0, 1fr); gap: 21px; }
+  .youtube-visual { width: min(100%, 260px); }
   h2 { font-size: clamp(31px, 7vw, 43px); }
   .project-card { grid-template-columns: 1fr; }
   .project-main { padding: 27px 23px; }
