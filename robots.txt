@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kravet.github.io/sitemap.xml
