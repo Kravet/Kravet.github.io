@@ -206,13 +206,14 @@ code { color: var(--mint); font-family: "SFMono-Regular", Consolas, "Liberation 
 
 .mentorship-band { position: relative; overflow: hidden; border-block: 1px solid rgba(114,227,196,0.15); background: linear-gradient(110deg, #102b35, #0d2230 60%, #0b1a27); }
 .mentorship-band::after { content: ""; position: absolute; top: -260px; right: -140px; width: 590px; height: 590px; border: 1px solid rgba(114,227,196,0.08); border-radius: 50%; box-shadow: 0 0 0 42px rgba(114,227,196,0.025), 0 0 0 84px rgba(114,227,196,0.02); pointer-events: none; }
-.mentorship-layout { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(155px, 0.48fr) minmax(0, 1.2fr) minmax(0, 1.5fr); gap: clamp(28px, 3.5vw, 52px); padding-block: 92px; }
-.mentorship-visual { width: min(100%, 230px); margin: 0; filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.2)); }
+.mentorship-layout { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); align-items: center; gap: clamp(38px, 6vw, 88px); padding-block: 76px; }
+.mentorship-visual { width: min(100%, 420px); justify-self: center; margin: 0; filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.2)); }
 .mentorship-visual svg { display: block; width: 100%; height: auto; }
-.mentorship-heading h2 { margin-top: 20px; font-size: clamp(35px, 3.8vw, 48px); line-height: 1.11; }
-.mentorship-copy { max-width: 500px; }
-.mentorship-lede { color: var(--muted-bright); font-size: 15px; line-height: 1.75; }
-.teaching-list { display: grid; gap: 0; margin: 22px 0 25px; padding: 0; list-style: none; }
+.mentorship-content { display: grid; min-width: 0; gap: 19px; align-content: center; }
+.mentorship-heading h2 { max-width: 700px; margin-top: 14px; font-size: clamp(35px, 3.8vw, 48px); line-height: 1.11; }
+.mentorship-copy { max-width: 560px; }
+.mentorship-lede { margin-bottom: 0; color: var(--muted-bright); font-size: 15px; line-height: 1.75; }
+.teaching-list { display: grid; gap: 0; margin: 16px 0 21px; padding: 0; list-style: none; }
 .teaching-list li { display: flex; gap: 14px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(183,204,219,0.12); color: var(--muted-bright); font-size: 11px; }
 .teaching-list li span { color: var(--mint); font-size: 8px; font-weight: 800; }
 .mentorship-result { display: flex; align-items: center; gap: 17px; max-width: 365px; padding: 14px 16px; border: 1px solid rgba(114,227,196,0.23); border-radius: 10px; background: rgba(8,19,31,0.32); }
@@ -331,8 +332,8 @@ code { color: var(--mint); font-family: "SFMono-Regular", Consolas, "Liberation 
   .product-card:last-child:nth-child(5) { grid-column: 1 / -1; width: calc((100% - 11px) / 2); justify-self: center; }
   .course-table tbody th, .course-table tbody td { padding: 15px 10px; font-size: 11px; }
   .course-table thead th { padding-inline: 10px; }
-  .mentorship-layout { grid-template-columns: 1fr; gap: 27px; padding-block: 69px; }
-  .mentorship-visual { width: min(100%, 260px); }
+  .mentorship-layout { grid-template-columns: 1fr; gap: 26px; padding-block: 69px; }
+  .mentorship-visual { width: min(100%, 350px); }
   .experience-layout { grid-template-columns: 1fr; gap: 24px; }
   .experience-visual { width: min(100%, 260px); }
   .mentorship-heading h2 { margin-top: 14px; font-size: 42px; }
