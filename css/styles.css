@@ -160,6 +160,7 @@ code { color: var(--mint); font-family: "SFMono-Regular", Consolas, "Liberation 
 .product-icon-link:hover { transform: translateY(-2px); border-color: rgba(114,227,196,0.62); }
 .product-icon-link:focus-visible { outline: 2px solid var(--mint); outline-offset: 3px; }
 .product-app-icon { display: block; width: 100%; height: 100%; border-radius: inherit; object-fit: cover; }
+.apps-overview-icon { display: block; width: 100%; height: 100%; border-radius: inherit; object-fit: cover; }
 .product-icon-cluster { display: flex; flex: 0 0 auto; gap: 5px; margin-left: auto; }
 .product-icon-cluster .product-icon-link { width: 28px; height: 28px; border-radius: 8px; }
 .product-card p { margin: 0; color: var(--muted-bright); font-size: 10px; line-height: 1.65; }
@@ -169,6 +170,14 @@ code { color: var(--mint); font-family: "SFMono-Regular", Consolas, "Liberation 
 .product-store-link:hover { color: var(--mint); }
 .product-note { margin: 17px 0 0; color: var(--muted); font-size: 9px; line-height: 1.6; }
 .product-note span { margin-right: 5px; }
+
+.apps-heading { display: grid; grid-template-columns: minmax(190px, 0.38fr) minmax(0, 1.62fr); align-items: center; gap: clamp(28px, 5vw, 68px); }
+.apps-visual { display: grid; width: min(100%, 230px); min-height: 174px; grid-template-columns: repeat(3, 42px); grid-auto-rows: 42px; align-content: center; justify-content: center; gap: 8px; padding: 14px; border: 1px solid rgba(183,204,219,0.18); border-radius: 16px; background: linear-gradient(145deg, rgba(21, 42, 59, 0.92), rgba(13, 27, 40, 0.94)); box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18); }
+.apps-visual .product-icon-link { width: 42px; height: 42px; border-radius: 11px; }
+.apps-visual .product-icon-link:nth-child(7) { grid-column: 2; }
+.apps-heading-copy { min-width: 0; }
+.apps-heading-copy .section-kicker { margin-bottom: 15px; }
+.apps-heading-copy .section-intro { max-width: 610px; margin: 14px 0 0; }
 
 .learning-heading { display: grid; grid-template-columns: minmax(150px, 0.32fr) minmax(0, 1.68fr); align-items: center; gap: clamp(26px, 5vw, 68px); }
 .youtube-visual { width: min(100%, 230px); margin: 0; filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.2)); }
@@ -302,6 +311,8 @@ code { color: var(--mint); font-family: "SFMono-Regular", Consolas, "Liberation 
   .engineering-visual { width: min(100%, 270px); }
   .learning-heading { display: grid; grid-template-columns: minmax(0, 1fr); gap: 21px; }
   .youtube-visual { width: min(100%, 260px); }
+  .apps-heading { display: grid; grid-template-columns: minmax(0, 1fr); gap: 21px; }
+  .apps-visual { width: min(100%, 270px); }
   h2 { font-size: clamp(31px, 7vw, 43px); }
   .project-card { grid-template-columns: 1fr; }
   .project-main { padding: 27px 23px; }
