@@ -289,11 +289,16 @@ code { color: var(--mint); font-family: "SFMono-Regular", Consolas, "Liberation 
   .shell { width: min(var(--content), calc(100% - 38px)); }
   .header-inner { min-height: 66px; }
   .brand-mark { width: 31px; height: 31px; }
-  .menu-toggle { display: grid; width: 40px; height: 40px; place-content: center; gap: 5px; border: 1px solid var(--line); border-radius: 9px; background: transparent; color: var(--text); cursor: pointer; }
+  /* With JavaScript unavailable, show navigation instead of hiding all section links. */
+  .header-inner { flex-wrap: wrap; }
+  .js-enabled .header-inner { flex-wrap: nowrap; }
+  .menu-toggle { display: none; width: 40px; height: 40px; place-content: center; gap: 5px; border: 1px solid var(--line); border-radius: 9px; background: transparent; color: var(--text); cursor: pointer; }
+  .js-enabled .menu-toggle { display: grid; }
   .menu-toggle span { display: block; width: 15px; height: 1px; background: currentColor; transition: transform 180ms ease; }
   .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3px) rotate(45deg); }
   .menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3px) rotate(-45deg); }
-  .primary-nav { position: absolute; top: 65px; right: 0; left: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 19px 15px; border-bottom: 1px solid var(--line); background: rgba(8,19,31,0.98); box-shadow: 0 18px 28px rgba(0,0,0,0.22); }
+  .primary-nav { position: static; flex-basis: 100%; display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 19px 15px; border-bottom: 1px solid var(--line); background: rgba(8,19,31,0.98); }
+  .js-enabled .primary-nav { position: absolute; top: 65px; right: 0; left: 0; display: none; flex-basis: auto; box-shadow: 0 18px 28px rgba(0,0,0,0.22); }
   .js-enabled .primary-nav[data-open="true"] { display: flex; }
   .primary-nav a { padding: 12px 5px; border-bottom: 1px solid rgba(183,204,219,0.08); }
   .primary-nav .nav-contact { margin-top: 5px; border: 0; }
