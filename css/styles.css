@@ -126,6 +126,14 @@ code { color: var(--mint); font-family: "SFMono-Regular", Consolas, "Liberation 
 .text-link { display: inline-flex; align-items: center; gap: 7px; color: var(--muted-bright); font-size: 12px; font-weight: 650; transition: color 180ms ease; }
 .text-link:hover { color: var(--mint); }
 .text-link span { color: var(--mint); }
+.project-engineering { display: grid; gap: 11px; margin: 1px 0 12px; padding: 18px 0 0; border-top: 1px solid var(--line); }
+.project-engineering-item { display: grid; grid-template-columns: 93px minmax(0, 1fr); gap: 12px; align-items: baseline; }
+.project-engineering-item dt { color: var(--mint); font-size: 12px; font-weight: 750; }
+.project-engineering-item dd { min-width: 0; margin: 0; color: var(--muted-bright); font-size: 13px; line-height: 1.6; overflow-wrap: anywhere; }
+.project-engineering-item code { font-size: 0.95em; }
+@media (max-width: 420px) {
+  .project-engineering-item { grid-template-columns: 1fr; gap: 2px; }
+}
 .project-gallery { position: relative; display: flex; align-items: center; justify-content: center; gap: clamp(12px, 3vw, 34px); overflow: hidden; min-height: 340px; padding: 18px 18px 16px; background: radial-gradient(ellipse at 50% 45%, rgba(77, 166, 172, 0.12), transparent 70%); }
 .project-gallery::before { content: "BATTERY EVENT → ALARM"; position: absolute; top: 25px; left: 25px; color: rgba(154, 171, 186, 0.5); font-family: "SFMono-Regular", Consolas, monospace; font-size: 12px; letter-spacing: 0.12em; }
 .device-shot { position: relative; width: clamp(108px, 12vw, 128px); aspect-ratio: 0.48; margin: 0; padding: 7px; border: 1px solid rgba(195, 207, 216, 0.32); border-radius: 20px; background: #060d14; box-shadow: 0 18px 45px rgba(0,0,0,0.35); }

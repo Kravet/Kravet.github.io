@@ -120,14 +120,29 @@
             <div class="project-overline"><span class="project-star" aria-hidden="true">✳</span> Featured project <span class="project-open">Open source · Kotlin</span></div>
             <h3 id="battery-title">Battery Alarm</h3>
             <p class="project-summary">
-              A focused Android utility that turns the system’s low-battery event into an audible,
-              vibrating alarm with an actionable notification.
+              A low-battery alarm for Android, and an open-source case study in making Android
+              integration testable without complicating a small app.
             </p>
             <div class="project-tags" aria-label="Technologies">
               <span>Kotlin</span><span>Jetpack Compose</span><span>Coroutines &amp; Flow</span><span>Hilt</span>
             </div>
+            <dl class="project-engineering" aria-label="Battery Alarm engineering decisions">
+              <div class="project-engineering-item">
+                <dt>Architecture</dt>
+                <dd>Two Gradle modules: <code>:app</code> depends on an Android-free Kotlin <code>:domain</code>.</dd>
+              </div>
+              <div class="project-engineering-item">
+                <dt>Decisions</dt>
+                <dd>Platform adapters stay in the app; the domain owns alarm state and serialized transitions.</dd>
+              </div>
+              <div class="project-engineering-item">
+                <dt>Tests &amp; CI</dt>
+                <dd>JVM test suites run in GitHub Actions; device tests cover additional Android scenarios.</dd>
+              </div>
+            </dl>
             <div class="project-links">
               <a class="button button-primary" href="https://github.com/Kravet/BatteryAlarm" target="_blank" rel="noopener noreferrer">Explore the code <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://github.com/Kravet/BatteryAlarm#current-architecture" target="_blank" rel="noopener noreferrer">Read architecture decisions <span aria-hidden="true">↗</span></a>
             </div>
           </div>
           <div class="project-gallery" aria-label="Battery Alarm app screens">
